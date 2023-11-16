@@ -14,37 +14,37 @@ const Sidebar: React.FC = () => {
         </div>
         <ul className={styles.menu}>
           <li>
-            <a href="#">
+            <a href="#search">
               <img src="assets/images/icons/search.png" alt="search"></img>
               <span className={styles.navText}>Search</span>
             </a>
           </li>
           <li className="has-subnav">
-            <a href="#">
+            <a href="#home">
               <img src="assets/images/icons/home.png" alt="Home"></img>
               <span className={styles.navText}>Home</span>
             </a>
           </li>
           <li className="has-subnav">
-            <a href="#">
+            <a href="#tvshows">
               <img src="assets/images/icons/tvshows.png" alt="TV Shows"></img>
               <span className={styles.navText}>TV Shows</span>
             </a>
           </li>
           <li className="has-subnav">
-            <a href="#">
+            <a href="#movies">
               <img src="assets/images/icons/movies.png" alt="Movies"></img>
               <span className={styles.navText}>Movies</span>
             </a>
           </li>
           <li>
-            <a href="#">
+            <a href="#genres">
               <img src="assets/images/icons/genres.png" alt="Genres"></img>
               <span className={styles.navText}>Genres</span>
             </a>
           </li>
           <li>
-            <a href="#">
+            <a href="#watchlater">
               <img
                 src="assets/images/icons/watchlater.png"
                 alt="Watch Later"
@@ -55,17 +55,17 @@ const Sidebar: React.FC = () => {
         </ul>
         <ul className={styles.bottom}>
           <li>
-            <a href="#">
+            <a href="#language">
               <span className={styles.navText}>Language</span>
             </a>
           </li>
           <li>
-            <a href="#">
+            <a href="#gethelp">
               <span className={styles.navText}>Get Help</span>
             </a>
           </li>
           <li>
-            <a href="#">
+            <a href="#exit">
               <span className={styles.navText}>Exit</span>
             </a>
           </li>

@@ -1,13 +1,6 @@
-export interface TrendingNowProps {
-    Id: string;
-    Title: string;
-    CoverImage: string;
-    TitleImage: string;
-    Date: string;
-    ReleaseYear: string;
-    MpaRating: string;
-    Category: string;
-    Duration: string;
-    VideoUrl: string;
-    Description: string;
+import { FeaturedProps } from "widgets/Header/ui/Header.interface";
+
+export interface TrendingCardProps {
+    TrendingNow: FeaturedProps;
+    handleClickImage: (props: string) => void;
 }

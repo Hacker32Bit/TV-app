@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { IoIosPlay } from "react-icons/io";
 
 import styles from "./Header.module.css";
@@ -14,7 +14,10 @@ const Header: React.FC<FeaturedProps> = ({
   MpaRating,
   Category,
   Duration,
+  VideoUrl,
   Description,
+  playVideo,
+  setPlayVideo,
 }) => {
   const convertSeconds = (seconds: number): string => {
     const hours = Math.floor(seconds / 3600);
@@ -26,6 +29,14 @@ const Header: React.FC<FeaturedProps> = ({
       return `${minutes}m`;
     }
   };
+
+  useEffect(() => {
+    if (setPlayVideo && VideoUrl) {
+      const timer = setTimeout(() => setPlayVideo(true), 2000);
+
+      return () => clearTimeout(timer);
+    }
+  });
 
   return (
     <div className={styles.header}>
@@ -44,11 +55,17 @@ const Header: React.FC<FeaturedProps> = ({
         </button>
         <button className={styles.info}>More Info</button>
       </div>
-      <img
-        className={styles.bg}
-        src={"assets/images/" + CoverImage}
-        alt="Title"
-      ></img>
+      {playVideo ? (
+        <video autoPlay muted loop className={styles.video}>
+          <source src={VideoUrl} type="video/mp4"></source>
+        </video>
+      ) : (
+        <img
+          className={styles.bg}
+          src={"assets/images/" + CoverImage}
+          alt="Title"
+        ></img>
+      )}
     </div>
   );
 };

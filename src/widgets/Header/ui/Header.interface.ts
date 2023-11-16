@@ -8,5 +8,8 @@ export interface FeaturedProps {
     MpaRating: string;
     Category: string;
     Duration: string;
+    VideoUrl?: string;
     Description: string;
+    playVideo?: boolean;
+    setPlayVideo?: (props: boolean) => void;
 }
