@@ -1,0 +1,17 @@
+.trendingCards {
+  position: absolute;
+  bottom: 0;
+  margin-left: 120px;
+  width: calc(100vw - 120px);
+}
+
+.trendingCards h2 {
+  font-weight: 400;
+}
+
+.scrollmenu {
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  white-space: nowrap;
+}

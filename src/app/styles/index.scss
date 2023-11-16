@@ -3,6 +3,8 @@
 @import "variables/global.scss";
 
 .app {
+  background-color: #000;
+  color: #fff;
   font: var(--font-m);
   min-height: 100vh;
 }
