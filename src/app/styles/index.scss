@@ -1,0 +1,8 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;700&display=swap');
+@import "reset.scss";
+@import "variables/global.scss";
+
+.app {
+  font: var(--font-m);
+  min-height: 100vh;
+}
